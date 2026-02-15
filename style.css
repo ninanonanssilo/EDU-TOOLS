@@ -41,6 +41,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .hero {
@@ -75,6 +76,7 @@ body {
 
 .grid {
   width: min(1100px, 100%);
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
