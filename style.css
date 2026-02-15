@@ -80,6 +80,7 @@ body {
   display: block;
   text-decoration: none;
   color: inherit;
+  text-align: center;
   border-radius: 18px;
   padding: 18px 16px;
   background: linear-gradient(180deg, var(--card2), var(--card));
