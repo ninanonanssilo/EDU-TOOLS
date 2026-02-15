@@ -112,6 +112,51 @@
     </footer>
   </main>
 
+  <!-- Contact FAB + modal -->
+  <button class="fab" id="contactFab" type="button" aria-label="문의하기">
+    <span aria-hidden="true">✉️</span>
+  </button>
+
+  <div class="modal" id="contactModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="1"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+      <div class="modal-head">
+        <div>
+          <div class="modal-title" id="contactTitle">문의하기</div>
+          <div class="modal-sub">문의 내용은 메일로 전달됩니다. (구글/네이버 계정 입력은 선택)</div>
+        </div>
+        <button class="icon-x" type="button" data-close="1" aria-label="닫기">×</button>
+      </div>
+
+      <form id="contactForm" class="modal-body">
+        <!-- honeypot -->
+        <input name="company" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
+
+        <label class="field">
+          <span>이름 (선택)</span>
+          <input name="name" type="text" placeholder="홍길동" maxlength="80" />
+        </label>
+
+        <label class="field">
+          <span>회신 이메일 (선택)</span>
+          <input name="email" type="email" placeholder="example@school.go.kr" maxlength="120" />
+        </label>
+
+        <label class="field">
+          <span>문의 내용</span>
+          <textarea name="message" placeholder="불편한 점/개선 요청/오류 제보 등을 남겨주세요." required rows="6" maxlength="4000"></textarea>
+        </label>
+
+        <div class="modal-actions">
+          <div class="hint" id="contactHint">전송 후 새 탭은 열리지 않습니다.</div>
+          <button class="btn" id="contactSend" type="submit">보내기</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
