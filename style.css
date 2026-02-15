@@ -165,6 +165,29 @@ body {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
 }
 
+.card.is-soon{
+  opacity: 0.78;
+  cursor: not-allowed;
+}
+.card.is-soon:hover{
+  transform: none;
+  border-color: var(--stroke);
+  background: linear-gradient(180deg, var(--card2), var(--card));
+}
+.card.is-soon::after{
+  content: "제작중";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  color: rgba(255,255,255,0.86);
+  border: 1px solid rgba(255,255,255,0.20);
+  background: rgba(0,0,0,0.25);
+}
+
 .card:active {
   transform: translateY(-2px) scale(0.99);
 }
