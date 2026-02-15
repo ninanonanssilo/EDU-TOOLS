@@ -92,13 +92,23 @@
 
     sendBtn && (sendBtn.disabled = true);
     try{
-      const r = await fetch('/api/contact', {
+      const r = await fetch('https://formspree.io/f/mnjbdowv', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: payload.name,
+          email: payload.email,
+          message: payload.message,
+          _subject: 'EDU TOOLS 문의',
+          // honeypot: still included (Formspree will ignore unknown fields)
+          company: payload.company,
+        }),
       });
       const j = await r.json().catch(()=>null);
-      if (!r.ok || !j?.ok){
+      if (!r.ok){
         toast(j?.error || '전송에 실패했습니다. 잠시 후 다시 시도해 주세요.', 2400);
         return;
       }
