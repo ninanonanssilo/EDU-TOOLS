@@ -82,6 +82,14 @@ body {
   gap: 14px;
 }
 
+.grid-note {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  margin: 0 0 6px;
+}
+
 .footer {
   width: min(1100px, 100%);
   margin-top: auto;
