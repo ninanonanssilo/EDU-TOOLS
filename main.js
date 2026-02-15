@@ -64,6 +64,8 @@
   }
 
   fab && fab.addEventListener('click', open);
+  const top = $('topContact');
+  top && top.addEventListener('click', (e)=>{ e.preventDefault(); open(); });
   modal && modal.addEventListener('click', (e) => {
     const t = e.target;
     if (t && t.getAttribute && t.getAttribute('data-close') === '1') close();
