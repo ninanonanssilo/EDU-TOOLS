@@ -103,15 +103,15 @@ body::after{
 
 .modal{ position: fixed; inset: 0; display:none; z-index: 60; }
 .modal.is-open{ display:block; }
-.modal-backdrop{ position:absolute; inset:0; background: rgba(0,0,0,0.45); backdrop-filter: blur(6px); }
+.modal-backdrop{ position:absolute; inset:0; background: rgba(3,6,23,0.62); backdrop-filter: blur(10px); }
 .modal-card{
   position: relative;
   width: min(560px, calc(100% - 28px));
   margin: 76px auto 0;
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.08));
-  border: 1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 28px 70px rgba(0,0,0,0.55);
+  background: linear-gradient(180deg, rgba(10,19,51,0.86), rgba(16,27,68,0.78));
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow: 0 28px 70px rgba(0,0,0,0.60);
   overflow: hidden;
 }
 .modal-head{
@@ -139,9 +139,9 @@ body::after{
 .field input, .field textarea{
   width: 100%;
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(0,0,0,0.18);
-  color: rgba(255,255,255,0.92);
+  border: 1px solid rgba(255,255,255,0.20);
+  background: rgba(3, 6, 23, 0.55);
+  color: rgba(255,255,255,0.94);
   padding: 10px 12px;
   font: inherit;
 }
